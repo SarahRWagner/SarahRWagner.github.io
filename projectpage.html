@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Diabetics Anonymous</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link href="css.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+<div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+    data-target="#navbarResponsive">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="projectpage.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="resources.html">Resources</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="meettheteam.html">Meet the Team</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="video.html">Video</a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+</nav>
+
+
+<!--Large Graph Section -->
+
+<div class="container-fluid padding">
+<div class="row text-center padding">
+    <div class="col-12">
+        <h1 class="display-4">The Real Time Graph</h1>
+    </div>
+    <div class="col-12">
+        <iframe width="1100" height="830" src="https://datastudio.google.com/embed/reporting/1MWD6rSjUK4WkgVBMfHVEMG03zLLccpIg/page/diJo" frameborder="0" style="border:0" allowfullscreen></iframe>    </div>
+</div>
+</div>
+<hr>
+<!--- Welcome Section -->
+<div class="container-fluid padding">
+        <div class="row welcome text-center">
+            <div class="col-12">
+                <div id="resources">
+                <h1 class="display-4">Why are we doing this?</h1>
+                </div>
+            </div>
+            <hr>
+            <div class="col-12">
+                <p class="lead">Sarah came to the group wanting to find a way to help advance the technology around the diabetes community. Currently her set up
+                        is the only FDA approved closed loop system, the Medtronic 670G. However, she has run into numerous issues with this auto mode. The problem
+                        with this pump is that there have to be so many safety features installed to protect the general public from too many low blood sugars. While
+                        it is important to have those features, those features demote the purpose of auto-mode. The auto-mode is so slow to respond because it doesn't
+                        want to react too rapidly and cause a low blood sugar. However, then because of that most of the time Sarah's blood sugars are out of range and she has to fix it manually anyway. 
+                </p>
+                <p class="lead">After a few months on the auto-mode she had to turn it off and return
+                        to the manual mode that she was trying to get away from. While Medtronic has recognized these issues, the time it takes for a new pump model
+                    `   to come out and be approved by the FDA will take years.
+                </p> 
+                <p class="lead">Type One Diabetes is a lifelong fight to balance treatments, blood sugars, food and exercise. If there is any tool that can help alleviate the stress
+                        of balancing all this, we want to find it! Our main inspiration came from the OpenAPS community. A group of programmers created their own artificial 
+                        pancreas through Python code on a Raspberry Pi that connects to old models of insulin pumps that have open radio channels. Intially we wanted to see if there
+                        was any code we could improve. The algorithm that decides the insulin rates turned out much more complex than anticipated. However, we found a
+                        wealth of data in the form of blood sugar readings and changing insulin rates. We decided we wanted to improve the way OpenAPS and NightScouts
+                        graphs its data. We wanted to have a graph that is easier to share with a doctor and a modern design that is running off the information we
+                        gathered from our old pump/Pi build. This page showcases all the moving parts to build this graph. 
+                </p>
+            </div>
+        </div>    
+        </div>
+        <hr>
+
+<!--- Closed Loop Section -->
+<div class="container-fluid padding">
+        <div class="row padding">
+            <div class="col-lg-8">
+                    <img class="pumppic1" width="800" height="550" src="pics/piii.jpg" frameborder="0" style="border:0" allowfullscreen>
+            </div>
+            <div class="col-lg-4">
+                <h2>What does 'closed loop' mean?</h2>
+                <p>Currently there is only one closed loop insulin pump on the market that the FDA approves of, the Medtronic 670G. What makes a closed loop
+                    insulin pump different from the regular insulin pumps is its "auto-mode". Auto-mode takes over the decision making for basal
+                    rates. A basal rate is the continous stream of insulin to control blood sugars 24 hours a day. </p>
+                <p>In the open loop systems the patient and their doctor have to decide the basal rates, and play a long game of guess and check
+                    to see if the basal is too high (too much insulin) or too low (too little insulin). A closed loop system uses a continous glucose
+                    monitor (CGM) that is worn by the patient 24/7 and pulls blood sugar values from the interstital fluid. The pump then takes that blood
+                    sugar value and runs it through an algorithm. That algorithm decides how much insulin the pump should push out.</p>
+                <p>As mentioned above, there is only one closed loop system out that is approved by the FDA. However, many diabetics took technology
+                    in their own hands and created their own closed loop system with the hardware listed above. This hacked version is more accurate
+                    and the patient can see the changed rates.
+                </p>
+            </div>
+      
+        </div>
+        </div>
+    <hr class="my-4">
+    
+<!--- Here's how the Loop works -->
+<div class="container-fluid padding">
+        <div class="row welcome text-center">
+            <div class="col-12">
+                <div id="resources">
+                <h1 class="display-4">How do we Loop?</h1>
+                </div>
+            </div>
+            <hr>
+            </div>
+        </div>    
+      
+
+<!--- Hardware Parts -->
+<div class="container-fluid padding">
+        <div class="row padding">
+            <div class="col-lg-4">
+                <h2>The hardware side...</h2>
+                <p>We started off this project with the idea to create our own real-time graph based off the changes an OpenAPS insulin pump
+                    would make in the insulin rates throughout the day and how it correlates to blood sugar trends. To start the project off we
+                    followed the OpenAPS guide to build a hacked insulin pump. </p>
+                <p>A Raspberry Pi Zero with headers, an Explorer Pi HAT, a 915 mgHZ antenna, a battery bank, a Medtronic 512 insulin pump, a 
+                    glucometer and many wires create the hacked closed loop system. You can find the instructions to put all these pieces together
+                    on the <a href="https://openaps.readthedocs.io/en/latest/index.html">OpenAPS documentation page</a>.</p>
+            
+            </div>
+            <div class="col-lg-8">
+                    <img width="600" height="450" src="pics/diagram1.jpg" frameborder="0" style="border:0" allowfullscreen>
+
+            </div>
+        </div>
+        </div>
+    <hr class="my-4">
+
+<!--- Here's how the Loop works -->
+<div class="container-fluid padding">
+        <div class="row welcome text-center">
+            <div class="col-12">
+                <div id="resources">
+                <h1 class="display-4">Step by Step...</h1>
+                </div>
+            </div>
+            <hr>
+            </div>
+        </div>    
+      
+<!--- Cards -->
+<div class="container-fluid padding">
+        <div class="row padding">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="pics/glucometerdia.jpg">
+                    <div class="card-body">
+                        <h4 class="card-title">The Glucometer</h4>
+                        <p class="card-text"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="pics/diagram2.jpg">
+                    <div class="card-body">
+                        <h4 class="card-title">The Pi with Explorer HAT</h4>
+                        <p class="card-text"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="pics/pumpdia.jpg">
+                    <div class="card-body">
+                        <h4 class="card-title">The Insulin Pump</h4>
+                        <p class="card-text"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <p class="lead">The loop begins with Sarah's glucometer. The glucometer takes blood sugar data from the sensor Sarah wears on her
+                        arm 24/7. The blood sugars are then transferred through an OTG cable to a phone. On the phone is NightScout's app. The data transfer will
+                        be discussed in more detail below, for now let's focus on the hardware. </p></div>
+            <div class="col-md-4">
+                <p class="lead">Once all the bloodsugar data is in the cloud it is then pulled back down.
+                        The Pi Zero has the OpenAPS python code downloaded on it. Through that alogorithm, the Pi then connects to its Explorer HAT. The HAT sits on top
+                        of the Pi and allows communication through a 915 mgHZ antenna to the Medtronic 512 pump. The HAT has an LED screen with buttons that allow the 
+                        user to view the current bloodsugar, time and graph of blood sugar trends. All of this is powered by a battery bank and runs on Wi-Fi. </p></div>
+            <div class="col-md-4">
+                <p class="lead">The pump picks up on the signals sent from the Pi HAT and pumps out the amount of insulin that the openAPS algorithm decided upon.</p>
+            </div>
+        </div>
+        </div>
+        <hr class="my-4">       
+<!--- Here's how the Loop works -->
+<div class="container-fluid padding">
+        <div class="row welcome text-center">
+            <div class="col-12">
+                <div id="resources">
+                <h1 class="display-4">Where does data come from?</h1>
+                <h2>And where does it go?</h2>
+                </div>
+            </div>
+            <hr>
+            <div class="col-12">
+                <p class="lead">Here is the cycle of data across the hardware, database, and into our graphs.</p>
+            </div>
+            <div class="col-12">
+                <img width="1100" height="500" src="pics/datadiagram.png" frameborder="0" style="border:0" allowfullscreen>
+            </div>
+
+        </div>  
+        <div class="row padding">
+        <div class="col-md-6">
+                <p class="lead">Now that we understand how the hardware loops, let's talk about the data. As mentioned above, the loop starts at the
+                    glucometer. Blood sugar data is pulled from the glucometer and is entered into an Android app on a phone through an OTG cable. The NightScouts
+                    Android app takes the readings and sends them up into the cloud to a Heroku cloud-based site. This Heroku site was created by running a script from 
+                    the OpenAPS Github. The script from OpenAPS creates a Mongo Database at the same time as the Heroku site. With the Mongo database set up, all the data
+                    coming from the mobile app has a place to be stored. Here is where the data flow breaks off into two areas.  </p></div>
+        <div class="col-md-6">
+            <p class="lead"> The first flow starts from Mongo and the Heroku site, and blood sugar data is pulled back down from the cloud to the
+                    Pi. The Pi is able to do this through the Python coded written on its SD card from OpenAPS. The data is run through OpenAPS' algorithm and that
+                    data is sent through the Pi to the HAT to the insulin pump and that cycles over and over for each new reading from the glucometer. </p>
+                    
+            <p class="lead">The second branch of data is where our project plays its part. We pulled data from Mongo through a Python API PyMongo. We took the values for the 
+                    date, time, insulin rates, and blood sugar values out of the database and inserted them into a Google Sheet. To insert this data we used the Google 
+                    Sheets API and the Google Drive API in Python. Once the data is inserted into a spreadsheet, we used Google Data Studios to generate the real time graph
+                    you see at the top of this page. The loop keeps going every five minutes. New entry is sent from the glucometer, to the database, through PyMongo, inserted
+                    into Google Sheets, and Data Studios updates its graph. All automated.
+            </p></div>
+         
+    </div>
+        </div>
+        <hr class="my-4">
+<!--- How we would expan this-->
+<div class="container-fluid padding">
+        <div class="row padding">
+            <div class="col-lg-4">
+                <h2>Let's talk expansion...</h2>
+                <p>This is the progress we've made over the course of 4-5 weeks of our semester in Intro to Programming. We learned many new skills
+                    that we can definitely expand on. The point we are at now with this project is a great launch pad for more diabetes tech expansion.
+                    Given more time we would like to create an app for school teachers that connects to our Data Studio chart. Since there are regulations
+                    on medical records of students, a teacher might not be able to look at a students direct blood sugar numbers, however our app idea would 
+                    use a light system. We set parameters on when a student's blood sugar is in range and the light stays green. When the student's blood sugars
+                    is too low or high the light will change to a different color. This allows for the teacher to be in the know, as well as protecting
+                    the students privacy.
+                </p>
+            
+            </div>
+            <div class="col-lg-8">
+                    <img width="600" height="450" src="pics/diagram1.jpg" frameborder="0" style="border:0" allowfullscreen>
+
+            </div>
+        </div>
+        </div>
+    
+
+
+
+
+
+
+<!--- Footer -->
+<footer>
+<div class="container-fluid padding">
+<div class="row text-center">
+    <div class="col-md-12">
+        <p></p>
+    </div>
+</div>
+</div>
+</footer>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
